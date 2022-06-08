@@ -1,7 +1,6 @@
 import styles from './products.module.css';
 import {Grid} from "@mui/material";
 import Link from 'next/link'
-import Image from 'next/image';
 
 export type ProductType = {
   id: number,
@@ -49,7 +48,7 @@ const Products = ({products}: ProductsPagePropsType) => {
                     {product.title}
                   </Grid>
                   <Grid item xs={4}>
-                    <Image className={styles.productImage} src={product.thumbnail} alt={'product image'}/>
+                    <img className={styles.productImage} src={product.thumbnail} width={300} height={300} alt={'product image'}/>
                   </Grid>
                 </Grid>
               </div>

@@ -2,7 +2,6 @@ import {useRouter} from 'next/router'
 import styles from './products.module.css'
 import {ProductType} from "./index";
 import {GetStaticPropsContext} from "next";
-import Image from 'next/image';
 
 type ProductDescriptionPagePropsType = {
   product: ProductType;
@@ -57,7 +56,7 @@ const ProductDescriptionPage = ({product}: ProductDescriptionPagePropsType) => {
       <p>brand: {product.brand} </p>
       <p>category: {product.category} </p>
       {product.images.map((image, index) => (
-        <Image key={index} src={image}  alt={''}/>
+        <img key={index} src={image} alt={''}/>
       ))}
     </div>
   )
